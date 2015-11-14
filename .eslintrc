@@ -1,0 +1,14 @@
+{
+    "ecmaFeatures": {
+        "blockBindings": true,
+        "forOf": true,
+        "jsx": true
+    },
+
+    "env": {
+      "browser": true,
+      "node": false,
+      "es6": true
+    }
+
+}

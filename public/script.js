@@ -115,6 +115,6 @@ let CommentBox = React.createClass({
   });
 //This is the part which renders the above classes to the DOM
 ReactDOM.render(
-  <CommentBox url="api/comments.json" pollInterval={2000000} />,
+  <CommentBox url="/api/comments" pollInterval={2000000} />,
   document.getElementById('content')
 );
