@@ -47,6 +47,12 @@ const CommentBox = React.createClass({
       }.bind(this)
     });
   },
+  handleCommentDelete: function() {
+    //This is where the comment is going to be deleted
+  },
+  handleCommentUpdate: function() {
+    //This is where the comment is going to be updated
+  },
   //This is one of the first funtion runs, it gets the current state before anything happens.
   getInitialState: function() {
     return {data: []};
@@ -69,6 +75,10 @@ const CommentBox = React.createClass({
 
 //This function maps the JSON data given by the above funtion and shows it to the virtual DOM.
 const CommentList = React.createClass({
+  handleDelete: function(e){
+    e.preventDefault();
+    conosle.log('Hello There');
+  },
   render: function() {
     let commentNodes = this.props.data.map(function(comment) {
       return (
@@ -110,6 +120,6 @@ const CommentForm = React.createClass({
 });
 
 ReactDOM.render(
-  <CommentBox url="/api/comments" pollInterval={2000} />,
+  <CommentBox url="/api/comments" pollInterval={2000000} />,
   document.getElementById('content')
 );
